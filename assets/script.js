@@ -45,7 +45,9 @@ var saveTasks = function() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
-
+$(".list-group").on("click", "p", function() {
+  console.log("<p> was clicked");
+});
 
 
 // modal was triggered
@@ -81,6 +83,7 @@ $("#task-form-modal .btn-primary").click(function() {
     saveTasks();
   }
 });
+
 
 // remove all tasks
 $("#remove-tasks").on("click", function() {
